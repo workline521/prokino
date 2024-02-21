@@ -1,13 +1,15 @@
 @font-face {
     font-family: "Inter";
-    src: url("../fonts/inter-v13-cyrillic_latin-600.woff2");
+    src: url("../fonts/inter-v13-cyrillic_latin-600.woff2") format('woff2');
     font-weight: 600;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Inter";
-    src: url("../fonts/inter-v13-cyrillic_latin-regular.woff2");
+    src: url("../fonts/inter-v13-cyrillic_latin-regular.woff2") format('woff2');
     font-weight: 400;
+    font-display: swap;
 }
 *, ::after, ::before{
   box-sizing: border-box;
@@ -174,11 +176,14 @@ body{
 }
 .trailer__wrapper{
   position: relative;
-  width: 100%;
-  height: 156px;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
 }
 .trailer__wrapper iframe{
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -272,9 +277,6 @@ body{
   .trailers__buttons{
     margin: 0 0 16px 0;
   }
-  .trailer__wrapper{
-    height: 366px;
-  }
   .footer{
     padding-top: 32px;
     padding-bottom: 32px;
@@ -303,7 +305,7 @@ body{
   .header__link:hover{
     background: #FF521B;
   }
-  .header__link:active{
+  .header__link:focus{
     background: #FF521B;
     border: 1px solid #FFF;
   }
@@ -328,7 +330,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .about__info{
+  .about__content{
     width: 48.88%;
   }
   .about__picture{
@@ -352,11 +354,8 @@ body{
   .trailers__button:hover{
     background: #FF521B;
   }
-  .trailers__button:active{
+  .trailers__button:focus{
     background: #FF3D00;
-  }
-  .trailer__wrapper{
-    height: 480px;
   }
   .footer{
     padding-top: 40px;
@@ -411,7 +410,7 @@ body{
   .about__title span{
     display: inline;
   }
-  .about__info{
+  .about__content{
     width: 57.7%;
   }
   .about__picture{
@@ -425,14 +424,15 @@ body{
     padding-top: 120px;
     padding-bottom: 120px;
   }
-  .trailer__wrapper{
-    height: 700px;
-  }
-  .footer__container{
+   .footer__container{
     position: relative;
   }
   .footer__logo{
     top: 47px;
     right: 0;
   }
+}
+.visually-hidden{
+  position: fixed;
+  transform: scale(0);
 }
