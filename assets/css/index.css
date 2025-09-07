@@ -627,11 +627,7 @@ p{
   padding-top: 30px;
   margin-bottom: 30px;
 }
-.advantage__wrap{
-
-}
 .advantage__item{
-  width: 250px;
   min-height: 440px;
   border-radius: 30px;
   background: #FFF;
@@ -860,13 +856,15 @@ p{
 .footer__pay-pic:first-child{
   margin-right: 10px;
 }
+.slider-block{
+  padding-top: 30px;
+}
 .slider{
   width: 100%;
 }
 .slider__item{
   display: block;
   width: 100%;
-  max-height: 156px;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
